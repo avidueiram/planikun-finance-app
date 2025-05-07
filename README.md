@@ -1,59 +1,46 @@
-# PlanikunFinanceApp
+# planikun-finance-app
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+planikun-finance-app is an Typescript frontend project using Angular framework. This project handles the public site logic for Planikun Finance related initiatives.
 
-## Development server
+## Table of Contents
 
-To start a local development server, run:
+1. [Setup](#setup)
+2. [Build](#build)
+3. [Serve](#serve)
+4. [Deploy](#deploy)
 
-```bash
-ng serve
-```
+## Setup
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+You'll need a recent version of the following:
 
-## Code scaffolding
+- [nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating) (with node >= 22.0.0)
+- [bun](https://bun.sh/docs/installation) (>= 1.2.7)
+- [angular-cli](https://github.com/angular/angular-cli?tab=readme-ov-file#development-setup) (>= 19.2.0)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Then you can proceed to install all NPM packages:
 
 ```bash
-ng generate --help
+bun install
 ```
 
-## Building
+## Build
 
-To build the project run:
+By running the project it will trigger a build, but if you want to build it beforehand:
 
 ```bash
-ng build
+# Replace <env> with the desired environment: local, dev and prod
+bun run build <env>
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Serve
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Angular serve command will start the server and watch any changes been done and automatically refreshes your browser:
 
 ```bash
-ng test
+# Replace <env> with the desired environment: local, dev, staging and prod
+bun run serve <env>
 ```
 
-## Running end-to-end tests
+## Deploy
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Deployments are done by triggering Google Cloud Build, go to the corresponding project and trigger a build.
